@@ -13,5 +13,7 @@ cd node-v0.8.11
 ./configure --prefix=${BOSH_INSTALL_TARGET}
 make
 make install
-# Alternatively, to copy archive contents:
-# cp -a node-v0.8.11/* $BOSH_INSTALL_TARGET
+
+export PATH=/var/vcap/packages/node08/bin
+
+npm install ${BOSH_COMPILE_TARGET}/node/coffee-script-1.3.3.tgz
