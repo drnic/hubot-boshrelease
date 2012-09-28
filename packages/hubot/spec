@@ -1,0 +1,5 @@
+---
+name: hubot
+dependencies:
+- node08
+files: []
