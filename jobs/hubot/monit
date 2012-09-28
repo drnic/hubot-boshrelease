@@ -1,0 +1,5 @@
+check process hubot
+  with pidfile /var/vcap/sys/run/hubot/hubot.pid
+  start program "/var/vcap/jobs/hubot/bin/monit_debugger hubot_ctl '/var/vcap/jobs/hubot/bin/hubot_ctl start'"
+  stop program "/var/vcap/jobs/hubot/bin/monit_debugger hubot_ctl '/var/vcap/jobs/hubot/bin/hubot_ctl stop'"
+  group vcap

@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+# job template binding variables
+
+# job name & index of this VM within cluster
+# e.g. JOB_NAME=redis, JOB_INDEX=0
+export NAME='<%= name %>'
+export JOB_INDEX=<%= index %>
+# full job name, like redis/0 or webapp/3
+export JOB_FULL="$NAME/$JOB_INDEX"
+
+export HUBOT_USER="<%= properties.hubot.name %>"
+<% if properties.campfire %>
+export HUBOT_ADAPTER=campfire
+export HUBOT_CAMPFIRE_ACCOUNT="<%= properties.campfire.account %>"
+export HUBOT_CAMPFIRE_TOKEN="<%= properties.campfire.token %>"
+export HUBOT_CAMPFIRE_ROOMS="<%= properties.campfire.rooms.join(',') %>"
+<% elsif properties.irc %>
+export HUBOT_IRC_ROOMS="<%= properties.irc.rooms.join(',') %>"
+export HUBOT_IRC_SERVER="<%= properties.irc.server %>"
+export HUBOT_IRC_PASSWORD="<%= properties.irc.server %>"
+export HUBOT_LOG_LEVEL="debug"  # This helps to see what Hubot is doing
+export HUBOT_IRC_DEBUG="true"
+<% else %>
+  <% raise "Must specify properties.campfire... or properties.irc..." %>
+<% end %>

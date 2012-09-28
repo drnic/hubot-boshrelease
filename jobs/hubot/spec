@@ -1,0 +1,11 @@
+---
+name: hubot
+packages:
+- hubot
+- node08
+templates:
+  bin/hubot_ctl: bin/hubot_ctl
+  bin/monit_debugger: bin/monit_debugger
+  data/properties.sh.erb: data/properties.sh
+  helpers/ctl_setup.sh: helpers/ctl_setup.sh
+  helpers/ctl_utils.sh: helpers/ctl_utils.sh
