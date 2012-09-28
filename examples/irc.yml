@@ -1,0 +1,6 @@
+---
+properties:
+  hubot:
+    name: hubot
+  irc:
+    account: drnic
