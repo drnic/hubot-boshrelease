@@ -8,4 +8,4 @@ export HOME=/var/vcap
 
 PATH=/var/vcap/packages/node08/bin:$PATH
 
-cp hubot/* $BOSH_INSTALL_TARGET
+cp -a hubot/* $BOSH_INSTALL_TARGET
