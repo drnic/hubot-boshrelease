@@ -2,4 +2,5 @@
 name: hubot
 dependencies:
 - node08
-files: []
+files:
+- hubot/*
