@@ -6,6 +6,6 @@ properties:
     account: drnic
     token: TOKEN
     rooms:
-    - room1
-    - room2
-    - room3
+    - 111111
+    - 222222
+    - 333333

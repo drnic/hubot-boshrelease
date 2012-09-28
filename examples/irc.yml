@@ -4,3 +4,5 @@ properties:
     name: hubot
   irc:
     account: drnic
+    server: irc.freenode.com
+    password: PASSWORD

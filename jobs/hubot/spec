@@ -21,6 +21,6 @@ properties:
     description: Your campfire API token
   campfire.rooms:
     default:
-      - room1
-      - room2
-    description: Rooms for Hubot to patrol
+      - 111111
+      - 222222
+    description: Room IDs for Hubot to patrol
